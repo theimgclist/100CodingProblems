@@ -1,5 +1,5 @@
 # 100CodingProblems
-My journey back to algorithms and problem solving  
+<b>My journey back to Algorithms and Problem Solving</b>    
 I used to love solving the coding problems from sites like Codechef, HackerRank etc back when i was in college.  
 Having said that, I have to mention that i have never been proficient at it. And adding my 2 years of job in an IT company so far to that, where I spent most of the time fixing bugs, I really miss the joy of solving the coding challenges which involved tyring to find an intuitive way to solve the problem at first and when that failed, try and see if i can use the algorithms(I only know a handful of them really) to solve them.   
 After thinking about getting back to my old love, that is Algorithms and Problem Solving for quite some time, i finally made a move(atleast, thats what i think creating a new github account and filling out this Readme file is, a move, my first step towards my former land!)  
