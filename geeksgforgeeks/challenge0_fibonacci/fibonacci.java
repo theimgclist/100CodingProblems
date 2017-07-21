@@ -16,11 +16,11 @@ public class Fibonacci
 		int nth_term = 0,nth_fib_number = 0;
 		try
 		{       nth_term = Integer.parseInt(br.readLine());
-			memo = new int[nth_term]; //array size declared here
+			memo = new int[nth_term+1]; //array size declared here
 			Arrays.fill(memo,-1);
 			Process link = new Process();
-			//nth_fib_number = link.nth_fib_number_memoization(nth_term-1, memo);
-			nth_fib_number = link.nth_fib_number_tabulation(nth_term,memo);
+			nth_fib_number = link.nth_fib_number_memoization(nth_term-1, memo);
+			//nth_fib_number = link.nth_fib_number_tabulation(nth_term-1,memo);
 		
 		}
 		catch (IOException e)
@@ -50,11 +50,11 @@ class Process
 	{
 		table[0] = 0;
 		table[1] = 1;
-		for(int i = 2; i < n; i++)
+		for(int i = 2; i <= n; i++)
 		{
 			table[i] = table[i-1] + table[i-2];
 		}
-		return table[n-1];
+		return table[n];
 	}
 }
          
