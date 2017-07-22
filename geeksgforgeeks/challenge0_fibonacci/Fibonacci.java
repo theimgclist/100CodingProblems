@@ -19,9 +19,8 @@ public class Fibonacci
 			memo = new int[nth_term+1]; //array size declared here
 			Arrays.fill(memo,-1);
 			Process link = new Process();
-			//nth_fib_number = link.nth_fib_number_memoization(nth_term-1, memo);
+			nth_fib_number = link.nth_fib_number_memoization(nth_term-1, memo);
 			//nth_fib_number = link.nth_fib_number_tabulation(nth_term-1,memo);
-			nth_fib_number = link.nth_fib_number_iterative(nth_term-1);
 		
 		}
 		catch (IOException e)
@@ -35,7 +34,7 @@ public class Fibonacci
 class Process
 {
 
-	public int nth_fib_number_memoization(int n, int[] memo)
+        public int nth_fib_number_memoization(int n, int[] memo)
 	{
 		if(memo[n] == -1)
          	{
@@ -56,21 +55,6 @@ class Process
 			table[i] = table[i-1] + table[i-2];
 		}
 		return table[n];
-	}
-	public int nth_fib_number_iterative(int n)
-	{
-		if(n == 0)
-			return 0;
-		int term1 = 0;
-		int term2 = 1;
-		int temp = 0;
-		for(int i = 2; i <= n; i++)
-		{
-		      temp = term2;
-		      term2 = term1 + term2;
-		      term1 = temp;
-		}
-		return term2;
 	}
 }
          
