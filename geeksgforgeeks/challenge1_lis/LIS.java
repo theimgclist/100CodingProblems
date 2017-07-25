@@ -25,7 +25,7 @@ public class LIS
 			for(i = 0; i < n; i++)
         			data[i] = Integer.parseInt(read.readLine());
                         Helper link = new Helper();
-                        lis = link.calculate_LIS(data); //calling the method that calculates the longest increasing subsequence
+                        lis = link.calculate_LIS(n,data); //calling the method that calculates the longest increasing subsequence
                         
 		}
 		catch (IOException e)
@@ -39,46 +39,41 @@ public class LIS
 }
 class Helper
 {
-	public int calculate_LIS(int[] n)
+	public int calculate_LIS(int n, int[] data)
 	{
-		int[] lisCount = new int[n.length]; // this array contains the lis for data at each index
-		for(int i = 0; i < n.length; i++)  // picks each value from the data
+		int[] lisCount = new int[n]; // this array contains the lis for data at each index
+		Arrays.fill(lisCount,1);
+		int lis = 0, position = -1;
+		for(int i = 1; i < n; i++)  // picks each value from the data
          	{
-         		int max = -1;
          		for(int j = 0; j < i; j++)  // this array compares the value picked above with all the before items in the data
          		{
-         			if(n[i] > n[j])      
+         			if(data[i] > data[j] && lisCount[i] < lisCount[j] + 1)      
          			{
-         				if(max == -1 || max < lisCount[j] + 1)
-         					max = 1 + lisCount[j];
-         			 }                                 
+         				lisCount[i] = 1 + lisCount[j];
+         			}                                 
          		}
-         	  	 if(max == -1)
-         	 		max = 1;
-         	 	lisCount[i] = max;	
-         	 }
-         	 int lis = -1;
-         	 int position = -1;
-         	 for(int i =0; i < lisCount.length; i++)
-         	 {
-         	 	if(lisCount[i] > lis)
-         	 	{
-         	 		lis = lisCount[i];
-         	 		position = i;
-         	 	}
-         	 }
-         	 String theSequence = n[position]+ " ";
-         	 int result = lis-1;
-         	 for(int i = position - 1; i >= 0; i--)
-         	 {
-         	 	if(lisCount[i] == result)
-         	 	{
-         	 		theSequence = n[i] + " "+theSequence;
+         	}
+         	for(int i = 0; i < n; i++)
+         	{
+              		if( lis < lisCount[i])
+              		{
+                 		lis = lisCount[i];
+                 		position = i;
+                 	}	
+                }	
+        	String theSequence = data[position]+ " ";
+         	int result = lis-1;
+         	for(int i = position - 1; i >= 0; i--)
+         	{
+         		if(lisCount[i] == result)
+         		{
+         			theSequence = data[i] + " "+theSequence;
          	 		result--;
          	 	}
-         	  }
-         	  LIS.theSequence = theSequence;
-         	  return lis;	
+         	}
+         	LIS.theSequence = theSequence;
+         	return lis;	
 
         }
 	
