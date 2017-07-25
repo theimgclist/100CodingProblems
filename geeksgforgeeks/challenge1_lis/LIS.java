@@ -32,7 +32,7 @@ public class LIS
 		{
 			e.printStackTrace();
 		}
-                System.out.println("The longest increasing subsequence for the give data of numbers is: "+lis);
+                System.out.println("The length of longest increasing subsequence for the given data of numbers is: "+lis);
                 System.out.println("The longest increasing subsequence is: "+theSequence);
 	}
 
