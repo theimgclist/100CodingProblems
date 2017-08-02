@@ -20,7 +20,8 @@ public class EditDistance
 			System.out.print("Enter second string : ");
 			word2 = read.readLine();
 			Helper link = new Helper();
-			editDistance = link.editChallenge(word1, word2);
+			editDistance = link.editDistance(word1, word2);
+			//editDistance = link.editDistance_usingLCS(word1, word2);
 			
 		}
 		catch (IOException e)
@@ -34,7 +35,7 @@ public class EditDistance
 class Helper
 {
 
-        public int editChallenge(String w1, String w2)
+        public int editDistance(String w1, String w2)
 	{
 		int len1 = w1.length();
 		int len2 = w2.length();
@@ -61,5 +62,27 @@ class Helper
 		}
 		return cache[len1][len2];	
         }
+        public int editDistance_usingLCS(String s1, String s2)
+	{
+		int len1, len2,length;
+		len1 = s1.length();
+		len2 = s2.length();
+		int[][] lcs = new int[len1 + 1][len2 + 1]; // this array contains the lcs
+		for(int i = 0; i <= len1; i++) 
+         	{
+         		for(int j = 0; j <= len2; j++)  
+         		{
+         			if( i == 0 || j == 0)
+         				lcs[i][j] = 0;
+         			else if(s1.charAt(i-1) == s2.charAt(j-1))
+         				lcs[i][j] = 1 + lcs[i-1][j-1];
+         			else
+         				lcs[i][j] = Math.max(lcs[i-1][j], lcs[i][j-1]);
+         		}
+         	}
+         	length = lcs[len1][len2];
+         	return Math.max(len1-length,len2-length);
+         }	
+
 }
          
