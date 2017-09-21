@@ -28,11 +28,11 @@ def knapsack(k_w,n,i_w,i_v):
 		for j in range(k_w + 1):
 			if i == 0 or j == 0:
 				cache[i][j] = 0
-			elif i_w[i - 1] <= k_w :
+			elif i_w[i - 1] <= j :
 				cache[i][j] = max(i_v[i] + cache[i-1][k_w - i_w[i-1]],
-				cache[i-1][k_w])
+				cache[i-1][j])
 			else :
-				cache[i-1][k_w]
+				cache[i][j] = cache[i-1][j]
 	return cache[n][k_w]
 			
 
