@@ -23,4 +23,14 @@ I will try to document in detail as much as i can as i go on with this project a
 I have started solving challenges from GeeksforGeeks. I started with DP.  
 For each problem, I will first code in Java with which I am comfortable.  
 Once the java solution works, I will code the same problem in  Python, since i want to get used to that language.  
-I found this useful link, [http://interactivepython.org/courselib/static/thinkcspy/Functions/FlowofExecutionSummary.html] which explains the flow of a Python code which is different to that of Java.  
+I found this useful link, [http://interactivepython.org/courselib/static/thinkcspy/Functions/FlowofExecutionSummary.html] which explains the flow of a Python code which is different to that of Java.    
+**Update 4th Jan 2017**   
+As of today, I coded 22 problems. Let's say 20 since 2 problems among those are almost the same as LIS.   
+So much progress in 5 months!!    
+For the past few problems onwards, I am coding only in Python. Since that's the programming language of interest for me right now.    
+I am spending most of the available time on Machine Learning and Data Science.    
+But I never gave up on algorithmic problem solving.   
+I have a wiki page for these problems where I am adding everything new I learn about coding in Python.  
+20 problems in 5 months isn't much progress.   
+But wait until the end of this month.   
+This time for a real progress!!  
