@@ -3,7 +3,7 @@
 """
 def minimumjumps(data,n) :
 	jumps = [0 for i in range(n)]
-	for i in range(n-1,-1,-1) : # start from right end and traverse to left
+	for i in range(n-2,-1,-1) : # start from right end and traverse to left
 		if data[i] == 0 : # when no steps can be taken any further from index i
 			jumps[i] = float('inf')
 		elif data[i] >= n-i-1 : # when end can be reached directly from i
@@ -23,7 +23,7 @@ def minimumjumps(data,n) :
 
 
 if __name__ == "__main__" :
-	data = [1, 3, 5, 6, 3, 2, 6, 7, 6, 8, 9]
+	data = [1, 3, 1, 6, 3, 2, 6, 7, 6, 8, 9]
 	n = len(data)
 	print("Minimum number of jumps to reach the end is %d"%int(minimumjumps(data,n)))
 		
