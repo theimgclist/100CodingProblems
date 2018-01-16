@@ -10,12 +10,12 @@ If its not in happy state, we flip it.
 And by doing so, we flip the k number of pancakes starting at 0.   
 Let's take an example input : S = ---+-++- , K = 3   
 Here - denotes blank state and + denotes happy state.   
-We start with index 0. Since it  is a blank state, we do a flip operation at index 0.
-This will flip the first 3 pancakes and we now have ++++-++-.
-We then iterate through the next pancakes until we find a blank state.
-Our next blank state is at 4.
-On performing flip operation at 4, we will get +++++---.
-We then search for next blank state which is at 5 and perform flip.
-This will give us ++++++++ which is our final state.
-In this example the number of flips are 3.
-For cases where it's not possible to get all happy states, we simply return IMPOSSIBLE.  
+We start with index 0. Since it  is a blank state, we do a flip operation at index 0.   
+This will flip the first 3 pancakes and we now have ++++-++-.   
+We then iterate through the next pancakes until we find a blank state.     
+Our next blank state is at 4.   
+On performing flip operation at 4, we will get +++++---.    
+We then search for next blank state which is at 5 and perform flip.   
+This will give us ++++++++ which is our final state.   
+In this example the number of flips are 3.   
+For cases where it's not possible to get all happy states, we simply return IMPOSSIBLE.    
