@@ -26,11 +26,13 @@ Now that gives us the required tidy number.
 To generalize it for any number :  
 1. Find the index i where the inverse happens.    
 2. Resolve the inverse by changing the number at i-1(reduce it by 1)   
-3. Change all digits from index i+1 till the end to 9.   
+3. Change all digits from index i+1 till the end to 9.    
+
 Step 2 will have some special cases to consider. What if the change leads to another inverse?   
 In that case, we will leave the digit as is, and check the one before it.  
 For example, when N = 5775, we see the inversion at i = 3.  
-Though we can resolve this inverse by taking 5765, this again has an inverse.  
-So we avoid that step and directly go to 7 at index 2.  
-Now reduce the digit by 1 and add 9s to fill the remaining digits.  
+We can resolve this inverse by applying step 2 and 3, after which we get 5769.  
+Though that resolved the existing inverse, this step led to another inverse at index 2 for the digits 7 and 6.  
+In such cases, we try to find an index i such that, resolving it will not lead to another inverse.  
+In this example, it's index i = 2. For 5769, we apply step 2 and 3.  
 This will give us 5699.   
