@@ -5,9 +5,10 @@
 * As we do this, we compare the current list item with the previous and see if there is a match
 * Match indicates a duplicate and the matched number has to be saved for result
 
-Below are some test cases from Firecode:  
-| Input         | Expected Result           |   
-| ------------- |:-------------|
+Below are some test cases from Firecode:    
+
+| Input        | Expected Result           |    
+| ------------- |:-------------|   
 | [4]           | [Empty]|
 |[1, 3, 3, 4]   | [3] |
 |[4, 3, 1]      | [Empty] |
