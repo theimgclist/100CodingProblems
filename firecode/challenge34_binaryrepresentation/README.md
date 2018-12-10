@@ -8,12 +8,13 @@ Write a function to compute the binary representation of a positive decimal inte
 
 dec_to_bin(6) ==> "110"  
 dec_to_bin(5) ==> "101"  
+
 | Input        | Expected Result           |    
-| ------------- |:-------------|   
-5 | 101
-1 | 1
-15 | 1111
-2  | 10
+| ------------- |:-------------| 
+5 | 101 |  
+1 | 1 |  
+15 | 1111 |  
+2  | 10 |  
 
 **Solution** :  
 
